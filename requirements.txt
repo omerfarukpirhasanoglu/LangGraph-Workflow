@@ -1,3 +1,6 @@
+fastapi
+uvicorn
+python-multipart
 langgraph
 python-dotenv
 langchain-groq
