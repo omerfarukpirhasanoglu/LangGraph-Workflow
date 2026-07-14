@@ -24,7 +24,7 @@ Her kutunun sorumluluğu net bir şekilde ayrılmış durumda:
 | `run_model` | Deterministik | Chroma'nın ONNX modelini ve renk analiz pipeline'ını doğrudan (aynı process içinde, ağ çağrısı olmadan) çalıştırır |
 | `load_history` | Deterministik | Cihazın son 5 analizinin kompakt özetini okur |
 | `contextual_interpret` | LLM | Ham metrikleri, geçmişi ve (varsa) kullanıcı bağlamını birlikte okuyup yorumlar; gerekirse netleştirici soru üretir |
-| `ask_user` | İnsan-döngüde | `interrupt()` ile graph'ı gerçekten durdurup kullanıcı yanıtını bekler |
+| `ask_user` | Kullanıcı-LLM | `interrupt()` ile graph'ı gerçekten durdurup kullanıcı yanıtını bekler |
 | `self_criticism` | LLM | Taslak yorumu ham metriklerle karşılaştırıp tutarlılığını denetler |
 | `update_history` | Deterministik | Nihai sonucun kompakt özetini geçmişe yazar |
 
@@ -39,7 +39,7 @@ Her kutunun sorumluluğu net bir şekilde ayrılmış durumda:
 
 ```
 agentic/
-├── main.py          # FastAPI backend
+├── main.py           # FastAPI backend
 ├── graph.py           # StateGraph tanımı, node/edge bağlantıları
 ├── state.py            # Graph boyunca taşınan state şeması
 ├── nodes.py             # Node fonksiyonları
