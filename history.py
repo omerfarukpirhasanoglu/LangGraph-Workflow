@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime, timezone
 
-DB_PATH = "history.db"
+DB_PATH = "/app/data/history.db"
 
 
 def _get_connection():
