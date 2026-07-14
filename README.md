@@ -40,7 +40,6 @@ Her kutunun sorumluluğu net bir şekilde ayrılmış durumda:
 ```
 agentic/
 ├── main.py          # FastAPI backend
-├── analysis.py       # Chroma'nın çerçeveden bağımsız görüntü/renk analiz mantığı
 ├── graph.py           # StateGraph tanımı, node/edge bağlantıları
 ├── state.py            # Graph boyunca taşınan state şeması
 ├── nodes.py             # Node fonksiyonları
